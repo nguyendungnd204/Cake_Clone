@@ -1,0 +1,81 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.25rem 3rem;
+  background-color: white;
+  font-family: 'Arial', sans-serif;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+.header-left img {
+  width: 80px;
+  height: auto;
+}
+
+.header-center {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.header-center ul {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+  padding: 0;
+  margin: 0;
+}
+
+.header-center ul li a {
+  text-decoration: none;
+  color: #001b3d; 
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  
+}
+
+.header-right button.icon-btn {
+  width: 40px;
+  height: 40px;
+  border: 1px solid #ccc;
+  border-radius: 50%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.lang-switch {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 999px;
+  padding: 0.3rem 0.7rem;
+  background: white;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+
+.download-btn {
+  padding: 0.5rem 1.5rem;
+  background-color: #001b3d; 
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 999px;
+  cursor: pointer;
+  font-size: 0.95rem;
+}
