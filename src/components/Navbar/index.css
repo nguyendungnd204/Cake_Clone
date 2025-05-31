@@ -1,3 +1,9 @@
+#navbar{
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 header {
   display: flex;
   justify-content: space-between;
@@ -9,6 +15,15 @@ header {
   top: 0;
   left: 0;
   right: 0;
+  border-bottom: solid 1px rgb(218, 218, 218);
+}
+
+.hide-desktop {
+    display : none
+}
+
+.about-cake{
+    margin-top: 5px;
 }
 
 .header-left img {
@@ -78,4 +93,160 @@ header {
   border-radius: 999px;
   cursor: pointer;
   font-size: 0.95rem;
+}
+
+@media(max-width: 1027px){
+    .hide-desktop {
+        display: block;
+    }
+
+    .header-center {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: white;
+        padding-top: 1rem;
+        transform: translateY(-150%);
+        transition: transform 0.3s ease-in-out;
+        z-index: 10;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        height: 300px;
+        gap: 0;
+        border-radius: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        
+    }
+    .close{
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+        padding: 0 1em 1em 1em;
+    }
+
+    .close a img {
+        width: 50px;
+        height: 30px;
+    }
+    .header-center ul {
+       gap: 1.5rem;
+    }
+
+   
+    .nav-link{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        text-align: start;
+        gap:0px;
+        
+        
+    }
+    .link{
+        display: flex;
+        justify-content: space-between;
+    }
+    .nav-link li {
+        padding: 0;
+        margin-left: 1em;
+        
+    }
+
+    .hide-mobile {
+        display: none;
+    }
+
+    .hide-mobile.lang-switch {
+        display: none;
+    }
+
+    .header-right {
+        gap: 0.5rem;
+    }
+    .menu-open {
+        margin-left: 10px;
+    }
+
+    /* Khi menuOpen bật, hiển thị nav bằng transform */
+    .header-center.show {
+    transform: translateY(0);
+
+    }
+    .download-btn{
+        margin-top: 1em;
+        width: 100%;
+    }
+    .lang-switch{
+        display: flex;
+        justify-content: space-between;
+        border: none;
+        padding: 0;
+    }
+
+}
+.search-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  backdrop-filter: blur(4px); /* hoặc background-color: rgba(0,0,0,0.2); */
+  z-index: 998;
+}
+
+/* Hộp tìm kiếm */
+.search-box {
+  position: fixed;
+  top: 0px;
+  left: 50%;
+  transform: translate(-50%, -150%);
+  transition: transform 0.3s ease;
+  z-index: 999;
+  width: 50%;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  pointer-events: none; /* tránh bị click khi ẩn */
+  opacity: 0;
+}
+
+.search-box.active {
+  transform: translate(-50%);
+  pointer-events: auto;
+  opacity: 1;
+}
+
+/* Input */
+.search-input {
+  position: absolute;
+  background-color: white;
+  right: 1em;
+  left: 1em;
+  top: 1.5em;
+  bottom: 1.5em;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 2px 4px gray;
+  border-radius: 30px;
+  padding: 0 1em;
+}
+
+.search-input input {
+  width: 100%;
+  margin-left: 0.5em;
+  border: none;
+  outline: none;
+  font-size: 1rem;
+}
+
+@media(max-width: 500px){
+    .search-box{
+        width: 100%;
+    }
 }
