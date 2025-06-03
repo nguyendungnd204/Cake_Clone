@@ -23,7 +23,7 @@ const Navbar = () => {
 
       <header>
         <div className="header-left">
-          <a href="#">
+          <a href="/">
             <img
               src="https://cake.vn/_next/image?url=%2F_next%2Fstatic%2Fmedia%2FCake-logo-01.e915daf7.webp&w=256&q=75"
               alt="Logo"
@@ -45,9 +45,9 @@ const Navbar = () => {
           </li>
           <ul className='nav-link'>
             <li className='link'><a href="#">Sản phẩm </a><ChevronDown size={20} /></li>
-            <li className='link about-cake'><a href="#">Về Cake</a></li >
+            <li className='link no-dropdown'><a href="#">Về Cake</a></li >
             <li className='link'><a href="#">Hỗ trợ </a><ChevronDown size={20} /></li >
-            <li className='link'><a href="#">Tin mới </a><ChevronDown size={20} /></li>
+            <li className='link no-dropdown'><a href="/login">Đăng nhập</a></li>
             <li className="hide-desktop lang-download">
               <div className="lang-switch">
                 <div><img src="https://flagcdn.com/w40/vn.png" alt="VN" width="20" />VI</div>

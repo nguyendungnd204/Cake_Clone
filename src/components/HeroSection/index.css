@@ -1,0 +1,96 @@
+.hero-carousel {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    height: 100vh;
+    max-height: 700px;
+    margin-top: 80px;
+}
+
+.carousel-wrapper {
+    display: flex;
+    height: 100%;
+    transition: transform 0.7s ease-in-out;
+}
+
+.carousel-slide {
+    flex: 0 0 100%;/*0: mo rong, 0: co lai, 100%: 1005 chieu rong co ban cua container*/
+    position: relative;
+    height: 100%;
+}
+
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;/* cắt và phóng to hình ảnh sao cho lấp 100 % width và height, nếu thừa sẽ cắt*/
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rbga(0, 0, 0, 0.6), transparent);
+}
+
+.slide-content {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem;
+    text-align: center;
+    animation: fadeIn 0.8s forwards
+}
+
+.slide-content h1 {
+    font-size: 1.2rem;
+    margin-bottom: 1.5rem;
+    max-width: 600px;
+}
+
+.slide-content button {
+    background-color: orange;
+    color: #1a12fc;
+    margin-top: 10px;
+    padding: 12px 24px;
+    font-size: 1em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: white;
+}
+
+.nav-button.prev {
+    left: 20px
+}
+
+.nav-button.next {
+    right: 20px
+}
+
+@keyframes  fadeIn {
+    from {opacity: 0; transform: translateY(20px);}
+    to {opacity: 1; transform : translateY(0);}
+}
+
+@media (max-width: 768px){
+    .slide-content{
+        font-size: 1.8rem;
+    }
+
+    .slide-content p {
+        font-size: 1rem;
+    }
+
+    .slide-content button {
+        font-size: 0.9rem;
+    }
+}
